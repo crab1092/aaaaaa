@@ -3,36 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>My Information</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <button class="menu-btn active" data-target="page1">Страница 1</button>
-    <button class="menu-btn" data-target="page2">Страница 2</button>
-    <div class="content-block active" data-group="pages" id="page1">
-    <h3>Контент 1</h3>
+    <header class="head">
+        <a href="https://github.com/crab1092">
+        <img class="head" src="https://avatars.githubusercontent.com/u/231054137?s=400&u=65ea292162f3669d7051e633b6cd5bf435a66886&v=4" alt="avatar">
+        </a>
+        <button class="menu-btn active" data-target="page1">Page 1</button>
+    <button class="menu-btn" data-target="page2">Page 2</button>
+    <button class="menu-btn" data-target="page3">Page 3</button>
+</header>
+<div class="content-block active" data-group="pages" id="page1">
+    <h1>Information about me:></h1>
+    <table>
+        <tbody>
+            <tr>
+                <td>My name:</td>
+                <td>Alex</td>
+            </tr>
+            <tr>
+                <td>My Nickname:</td>
+                <td>Anomaly</td>
+            </tr>
+            <tr>
+                <td>My favorite games lately:</td>
+                <td>Pubg and Osu!</td>
+            </tr>
+            <tr>
+                <td>I live in the city:</td>
+                <td>Stavropol</td>
+            </tr>
+        </tbody>
+    </table>
 </div>
 <div class="content-block" data-group="pages" id="page2">
-    <h3>Контент 2</h3>
+    <h3>Here are Neko anime girls:></h3>
+<button id="fetchButton">Request</button>
+<div id="status"></div>
+<div id="result"></div>
 </div>
-<button id="btn">Нажми</button>
-<script>
-    document.getElementById('btn').addEventListener('click', function() {
-        console.log('Функция вызвана');
-    });
-
-    document.querySelectorAll('.menu-btn').forEach(button => {
-    button.addEventListener('click', () => {
-        document.querySelectorAll('.menu-btn').forEach(btn => btn.classList.remove('active'));
-        document.querySelectorAll('.content-block').forEach(block => block.classList.remove('active'));
-
-        button.classList.add('active');
-
-        const targetId = button.getAttribute('data-target');
-        document.getElementById(targetId).classList.add('active');
-    });
-});
-</script>
+<div class="content-block" data-group="pages" id="page3">
+    <h2>Minor information about me:></h2>
+    <table>
+        <tbody>
+            <tr>
+                <td>JavaScript:</td>
+                <td>low Junior</td>
+            </tr>
+            <tr>
+                <td>Python:</td>
+                <td>low Junior</td>
+            </tr>
+            <tr>
+                <td>PostgreSQL:</td>
+                <td>low Junior</td>
+            </tr>
+            <tr>
+                <td>Php:</td>
+                <td>low Junior</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
 
 </body>
 </html>
+<script src="script.js"></script>
